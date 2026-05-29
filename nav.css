@@ -1,0 +1,68 @@
+/* Cette partie règle la base générale de la page et la couleur du texte. */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+/* Cette partie limite la largeur principale pour garder beaucoup d'espace blanc. */
+.page-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  padding-right: var(--spacing-lg);
+  padding-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-lg);
+}
+
+/* Cette partie contient la navigation collée en haut pendant le défilement. */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-page);
+}
+
+/* Cette partie centre l'identité visuelle dans la barre de navigation. */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--spacing-md);
+  padding-right: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+/* Cette partie stylise le nom du site comme un repère sobre. */
+.site-logo {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--transition-base);
+}
+
+/* Cette partie ajoute un changement simple au survol du logo. */
+.site-logo:hover {
+  color: var(--color-accent);
+}
+
+/* Cette partie garde des marges plus petites sur écran mobile. */
+@media (max-width: 768px) {
+  .page-main {
+    padding-top: var(--spacing-lg);
+    padding-right: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-md);
+  }
+
+  .site-nav {
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
+  }
+}

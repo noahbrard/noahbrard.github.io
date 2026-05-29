@@ -1,0 +1,100 @@
+/* Cette partie structure chaque grande section de contenus. */
+.projects-section,
+.products-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Cette partie règle le style des titres de section. */
+.section-title {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.75em;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Cette partie construit la grille de projets sur quatre colonnes. */
+.project-grid,
+.product-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cette partie enlève simplement la présentation par défaut des éléments de liste. */
+.project-card-item,
+.product-card-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* Cette partie crée une carte lisible pour chaque contenu de la grille. */
+.project-card,
+.product-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  height: 100%;
+  padding-top: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+/* Cette partie rassemble image et légende dans un même bloc. */
+.project-figure,
+.product-figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: 0;
+}
+
+/* Cette partie recadre doucement l'image dans la carte. */
+.project-image,
+.product-image {
+  border-radius: var(--radius-card);
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Cette partie affiche des légendes courtes en ton secondaire. */
+.project-caption,
+.product-caption {
+  color: var(--text-secondary);
+  font-size: 0.875em;
+  margin: 0;
+}
+
+/* Cette partie stylise les titres des cartes avec une hiérarchie simple. */
+.project-card-title,
+.product-card-title {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Cette partie règle les descriptions longues pour qu'elles restent confortables à lire. */
+.project-card-text,
+.product-card-text {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Cette partie transforme les grilles en colonne unique sur mobile. */
+@media (max-width: 768px) {
+  .project-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

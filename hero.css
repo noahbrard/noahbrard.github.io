@@ -1,0 +1,32 @@
+/* Cette partie présente l'introduction de la galerie avec une mise en page simple. */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 900px;
+}
+
+/* Cette partie affiche une petite information de contexte au-dessus du titre. */
+.hero-kicker {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Cette partie donne au titre principal une échelle plus visible. */
+.hero-title {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Cette partie adapte la taille du titre sur mobile. */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2em;
+  }
+}
